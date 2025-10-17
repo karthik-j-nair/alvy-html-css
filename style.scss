@@ -40,12 +40,13 @@ nav {
 
 main {
   width: 100%;
-  padding: 0 1rem;
   @include flexColumn(0.7rem);
+  align-items: center;
 }
 
 section {
-  max-width: 1600px;
+  padding: 0 1rem;
+  max-width: 2300px;
 }
 
 .hero {
@@ -276,10 +277,10 @@ section {
       .team-name {
         position: absolute;
         bottom: 5%;
-        left: 3.9%;
+        left: 6%;
         display: flex;
         align-items: center;
-        gap: 6rem;
+        gap: 5rem;
         padding: 0.4rem 1rem;
         border-radius: 0.5rem;
         justify-content: space-between;
@@ -350,9 +351,9 @@ section {
 }
 
 .contact {
-  width: 100%;
+  width: 91.5%;
   @include flexColumn(1rem);
-  padding: 2rem;
+  padding: 1.7rem;
   background-color: #cebd63;
   border-radius: 0.5rem;
 
@@ -367,7 +368,7 @@ section {
     h4 {
       text-transform: uppercase;
       line-height: 1;
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 400;
     }
   }
@@ -383,8 +384,120 @@ section {
   }
 }
 
+footer {
+  padding: 1rem 1rem;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  // grid-template-rows: 20vh 90.5vh 15vh;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "f1"
+    "f2"
+    "f3";
+
+  .footer1 {
+    width: 100%;
+    grid-area: f1;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    @include flexColumn(4rem);
+    justify-content: space-between;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    p {
+      a {
+        text-decoration: none;
+        color: #fff;
+        margin-right: 0.3rem;
+        i {
+          font-size: 1rem;
+          padding: 0.58rem;
+          border: 0.1rem solid #ffffff42;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .footer2 {
+    width: 100%;
+    grid-area: f2;
+    background-color: #3a3920;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    @include flexColumn(2rem);
+    .pages {
+      @include flexColumn(1.3rem);
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+      p {
+        color: #ffffff91;
+      }
+    }
+    .cms {
+      @include flexColumn(1.3rem);
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+      p {
+        color: #ffffff91;
+      }
+    }
+    .utility {
+      @include flexColumn(1.3rem);
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+      p {
+        color: #ffffff91;
+      }
+    }
+  }
+  .footer3 {
+    width: 100%;
+    grid-area: f3;
+    border-radius: 0.5rem;
+    background-color: #1e1e1e;
+    @include flexColumn(1.2rem);
+    justify-content: space-between;
+    padding: 1.5rem;
+    text-align: center;
+    color: #ffffff7e;
+    .part1 {
+      p {
+        line-height: 1.4;
+        span {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+    .part2 {
+      p {
+        cursor: pointer;
+        i {
+          padding: 0.5rem;
+          border: 0.1rem solid #ffffff31;
+          border-radius: 50%;
+          margin-left: 0.5rem;
+          background-color: #2e2e2e;
+        }
+      }
+    }
+  }
+}
+
 // media query ------------------------>
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   nav {
     height: 10vh;
     justify-content: space-between;
@@ -402,10 +515,15 @@ section {
         background-color: #1e1e1e;
         color: #fff;
       }
+
+      #last {
+        background-color: #cebd63;
+        color: #121212;
+      }
     }
   }
 
-  main {
+  session {
     padding: 1rem;
   }
 
@@ -534,10 +652,10 @@ section {
         .team-socials {
           left: 55%;
         }
-      }
 
-      .team-name {
-        left: 9%;
+        .team-name {
+          left: 6.6%;
+        }
       }
     }
   }
@@ -585,10 +703,11 @@ section {
   }
 
   .contact {
+    width: 97.5%;
     flex-direction: row;
-    gap: 7rem;
+    gap: 5rem;
     align-items: flex-end;
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
 
     .contact-text {
       width: 70%;
@@ -597,8 +716,8 @@ section {
         font-weight: 400;
       }
       h4 {
-        width: 90%;
-        font-size: 4.2rem;
+        width: 85%;
+        font-size: 3.6rem;
       }
     }
 
@@ -608,6 +727,54 @@ section {
       font-size: 1rem;
       padding: 1rem 2rem;
       border-radius: 0.5rem;
+    }
+  }
+
+  footer {
+    grid-template-columns: 23% 76%;
+    // grid-template-rows: 20vh 90.5vh 15vh;
+    grid-template-rows: 73% 24%;
+    grid-template-areas:
+      "f1 f2"
+      "f1 f3";
+
+    
+    .footer2 {
+      flex-direction: row;
+      justify-content: space-around;
+      .pages {
+        @include flexColumn(1.3rem);
+        h4 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      .cms {
+        @include flexColumn(1.3rem);
+        h4 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      .utility {
+        @include flexColumn(1.3rem);
+        h4 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .footer3 {
+      flex-direction: row;
+      align-items: center;
+      padding: 1.7rem 2rem;
+      
     }
   }
 }

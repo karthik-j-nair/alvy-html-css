@@ -32,14 +32,15 @@ nav .elements {
 
 main {
   width: 100%;
-  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  align-items: center;
 }
 
 section {
-  max-width: 1600px;
+  padding: 0 1rem;
+  max-width: 2300px;
 }
 
 .hero {
@@ -262,10 +263,10 @@ section {
 .team .team-details .team-img .team-name {
   position: absolute;
   bottom: 5%;
-  left: 3.9%;
+  left: 6%;
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 5rem;
   padding: 0.4rem 1rem;
   border-radius: 0.5rem;
   justify-content: space-between;
@@ -331,11 +332,11 @@ section {
 }
 
 .contact {
-  width: 100%;
+  width: 91.5%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1.7rem;
   background-color: #cebd63;
   border-radius: 0.5rem;
 }
@@ -352,7 +353,7 @@ section {
 .contact .contact-text h4 {
   text-transform: uppercase;
   line-height: 1;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 .contact #contact-button {
@@ -365,7 +366,120 @@ section {
   border-radius: 0.5rem;
 }
 
-@media (min-width: 1024px) {
+footer {
+  padding: 1rem 1rem;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "f1" "f2" "f3";
+}
+footer .footer1 {
+  width: 100%;
+  grid-area: f1;
+  background-color: #1e1e1e;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: space-between;
+}
+footer .footer1 h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+footer .footer1 p a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 0.3rem;
+}
+footer .footer1 p a i {
+  font-size: 1rem;
+  padding: 0.58rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.2588235294);
+  border-radius: 50%;
+}
+footer .footer2 {
+  width: 100%;
+  grid-area: f2;
+  background-color: #3a3920;
+  background-color: #1e1e1e;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .footer2 .pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+footer .footer2 .pages h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+footer .footer2 .pages p {
+  color: rgba(255, 255, 255, 0.568627451);
+}
+footer .footer2 .cms {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+footer .footer2 .cms h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+footer .footer2 .cms p {
+  color: rgba(255, 255, 255, 0.568627451);
+}
+footer .footer2 .utility {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+footer .footer2 .utility h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+footer .footer2 .utility p {
+  color: rgba(255, 255, 255, 0.568627451);
+}
+footer .footer3 {
+  width: 100%;
+  grid-area: f3;
+  border-radius: 0.5rem;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4941176471);
+}
+footer .footer3 .part1 p {
+  line-height: 1.4;
+}
+footer .footer3 .part1 p span {
+  color: #fff;
+  text-decoration: underline;
+}
+footer .footer3 .part2 p {
+  cursor: pointer;
+}
+footer .footer3 .part2 p i {
+  padding: 0.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1921568627);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  background-color: #2e2e2e;
+}
+
+@media (min-width: 1025px) {
   nav {
     height: 10vh;
     justify-content: space-between;
@@ -384,7 +498,11 @@ section {
     background-color: #1e1e1e;
     color: #fff;
   }
-  main {
+  nav .elements #last {
+    background-color: #cebd63;
+    color: #121212;
+  }
+  session {
     padding: 1rem;
   }
   .hero {
@@ -496,8 +614,8 @@ section {
   .team .team-details .team-img .team-socials {
     left: 55%;
   }
-  .team .team-details .team-name {
-    left: 9%;
+  .team .team-details .team-img .team-name {
+    left: 6.6%;
   }
   .join-our-team {
     flex-direction: row;
@@ -536,10 +654,11 @@ section {
     margin-right: 1rem;
   }
   .contact {
+    width: 97.5%;
     flex-direction: row;
-    gap: 7rem;
+    gap: 5rem;
     align-items: flex-end;
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
   }
   .contact .contact-text {
     width: 70%;
@@ -549,8 +668,8 @@ section {
     font-weight: 400;
   }
   .contact .contact-text h4 {
-    width: 90%;
-    font-size: 4.2rem;
+    width: 85%;
+    font-size: 3.6rem;
   }
   .contact #contact-button {
     background-color: black;
@@ -558,5 +677,52 @@ section {
     font-size: 1rem;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
+  }
+  footer {
+    grid-template-columns: 23% 76%;
+    grid-template-rows: 73% 24%;
+    grid-template-areas: "f1 f2" "f1 f3";
+  }
+  footer .footer2 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer .footer2 .pages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  footer .footer2 .pages h4 {
+    font-size: 1.2rem;
+  }
+  footer .footer2 .pages p {
+    font-size: 0.8rem;
+  }
+  footer .footer2 .cms {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  footer .footer2 .cms h4 {
+    font-size: 1.2rem;
+  }
+  footer .footer2 .cms p {
+    font-size: 0.8rem;
+  }
+  footer .footer2 .utility {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  footer .footer2 .utility h4 {
+    font-size: 1.2rem;
+  }
+  footer .footer2 .utility p {
+    font-size: 0.8rem;
+  }
+  footer .footer3 {
+    flex-direction: row;
+    align-items: center;
+    padding: 1.7rem 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
